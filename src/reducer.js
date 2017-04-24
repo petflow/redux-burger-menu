@@ -1,12 +1,16 @@
-import { TOGGLE_MENU } from './action';
+import { actions } from './action';
 
 const reducer = (state = {isOpen: false}, action) => {
   switch (action.type) {
-    case TOGGLE_MENU:
+    case actions.TOGGLE_MENU:
       const { isOpen, menuId } = action.payload
       return menuId
         ? { ...state, [menuId]: { isOpen } }
         : { ...state, isOpen }
+
+    case actions.TOGGLE_WIDTH:
+      const { width } = action.payload;
+      return {...state, width }
     default:
       return state;
   }
