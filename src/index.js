@@ -1,6 +1,7 @@
 import decorator from './decorator';
 import reducer from './reducer';
-import { action } from './action';
+import { actionObj } from './action';
+const action = actionObj;
 
 export {
   decorator,

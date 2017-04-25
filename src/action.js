@@ -17,4 +17,4 @@ const toggleWidth = (width) => {
   };
 };
 
-export { toggleMenu, toggleWidth };
+export const actionObj = { toggleMenu, toggleWidth };
