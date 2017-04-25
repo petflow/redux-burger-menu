@@ -18,15 +18,14 @@ const reduxBurgerMenu = (ComposedComponent, menuId) => {
   const mapDispatchToProps = (dispatch) => {
     return {
       onStateChange: (newState) => {
-        if (newState.isOpen !== state.isOpen) dispatch(toggleMenu(newState.isOpen, menuId));
-        if (newState.width !== state.width) dispatch(toggleWidth(newState.width));
+        dispatch(toggleMenu(newState.isOpen, menuId));
+        dispatch(toggleWidth(newState.width));
       }
     };
   };
 
   return connect(
-    mapStateToProps,
-    mapDispatchToProps
+    mapStateToProps
   )(ComposedComponent);
 };
 
