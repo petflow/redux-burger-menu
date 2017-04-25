@@ -3,14 +3,14 @@ export const actions = {
   TOGGLE_WIDTH: 'TOGGLE_WIDTH'
 }
 
-const toggleMenu = (isOpen = true, menuId) => {
+const toggleMenu = (isOpen, menuId) => {
   return {
     type: actions.TOGGLE_MENU,
     payload: menuId ? { isOpen, menuId } : { isOpen }
   };
 };
 
-const toggleWidth = (width = 180) => {
+const toggleWidth = (width) => {
   return {
     type: actions.TOGGLE_WIDTH,
     payload: width
