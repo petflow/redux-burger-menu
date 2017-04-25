@@ -1,6 +1,6 @@
 import { actions } from './action';
 
-const reducer = (state, action) => {
+const reducer = (state = {}, action) => {
   switch (action.type) {
     case actions.TOGGLE_MENU:
       const { isOpen, menuId } = action.payload
