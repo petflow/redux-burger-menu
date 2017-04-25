@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { toggleMenu, toggleWidth } from './action';
+import { actionObj } from './action';
+const { toggleMenu, toggleWidth } = actionObj;
 
 const reduxBurgerMenu = (ComposedComponent, menuId) => {
   const mapStateToProps = (state) => {
