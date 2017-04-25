@@ -9,8 +9,7 @@ const reducer = (state = {isOpen: true, width: 180}, action) => {
         : { ...state, isOpen }
 
     case actions.TOGGLE_WIDTH:
-      const { width } = action.payload;
-      console.log(action);
+      const width = action.payload;
       return {...state, width }
     default:
       return state;
