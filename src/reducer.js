@@ -7,7 +7,6 @@ const reducer = (state = {isOpen: true, width: 180}, action) => {
       return menuId
         ? { ...state, [menuId]: { isOpen } }
         : { ...state, isOpen }
-
     case actions.TOGGLE_WIDTH:
       const width = action.payload;
       return {...state, width }
